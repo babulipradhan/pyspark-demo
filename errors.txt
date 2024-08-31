@@ -1,0 +1,13 @@
+Error:
+py4j.protocol.Py4JError: org.apache.spark.api.python.PythonUtils.isEncryptionEnabled does not exist in the JVM
+
+Fix:
+1.	Set PYTHONPATH
+		SPARK_HOME=D:\Softwares\spark-2.4.8-bin-hadoop2.7
+		PYTHONPATH=%SPARK_HOME%\python
+
+2.	Add py4j src zip file path to path variable as below
+		%PYTHONPATH%\lib\py4j-0.10.7-src.zip
+
+Refer "1. Environment Variables: " section of below article:
+https://community.databricks.com/t5/data-engineering/py4jerror-py4j-does-not-exist-in-the-jvm/td-p/64119
